@@ -14,6 +14,7 @@ import Button from './Styling/Button'
 import Input from './Styling/Input'
 import CREATE_VIDEO from '../Queries/ADD_VIDEO'
 import GET_FAVORITES from '../Queries/GET_FAVORITES'
+import SWITCH_MODE, { GET_MODE } from '../Queries/SWITCH_MODE'
 
 import linkParser from '../Utils/link-parser'
 
@@ -364,6 +365,19 @@ class Navigation extends Component {
                                             )}
                                         </Mutation>
                                     </Modal>
+                                </Item>
+                                <Item>
+                                    <Mutation mutation={SWITCH_MODE}>
+                                        {(switchMode, { data, loading }) => (
+                                            <Query query={GET_MODE}>
+                                                {({ data: { mode } }) => (
+                                                    <a onClick={switchMode}>
+                                                        <span>{mode}</span>
+                                                    </a>
+                                                )}
+                                            </Query>
+                                        )}
+                                    </Mutation>
                                 </Item>
                             </List>
                         </Nav>
