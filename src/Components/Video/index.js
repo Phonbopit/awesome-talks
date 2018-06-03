@@ -27,6 +27,7 @@ const Speaker = styled.p`
 `
 
 const Name = styled.h2`
+<<<<<<< HEAD
     font-weight: 700;
     font-size: ${remcalc(24)};
     color: ${props => props.theme.black};
@@ -34,13 +35,20 @@ const Name = styled.h2`
     margin-bottom: ${remcalc(10)};
     margin-top: 0;
     display: block;
+=======
+    font-size: 300;
+    font-size: ${remcalc(20)};
+    color: ${props => props.theme.main};
+    line-height: ${remcalc(25)};
+    letter-spacing: ${remcalc(-0.01)};
+>>>>>>> Merge with master
 `
 
 const Description = styled.p`
     opacity: 0.8;
     font-family: Montserrat-Light;
     font-size: ${remcalc(14)};
-    color: ${props => props.theme.black};
+    color: ${props => props.theme.main};
     letter-spacing: ${remcalc(0.11)};
     line-height: ${remcalc(21)};
 `
@@ -54,7 +62,7 @@ const Duration = styled.span`
     position: relative
     right: ${remcalc(10)};
     top: ${remcalc(15)};
-    color: ${props => props.theme.darkGrey};
+    color: ${props => props.theme.tertiary};
 `
 
 const makeLink = (url = 'speaker', name = 'FIX ME') =>
